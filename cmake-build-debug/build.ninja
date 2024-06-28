@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_pic_printer: phony || CMakeFiles/pic_pri
 
 build CMakeFiles/pic_printer.dir/main.c.obj: C_COMPILER__pic_printer_unscanned_Debug C$:/Users/Owner/CLionProjects/pic_printer/main.c || cmake_object_order_depends_target_pic_printer
   DEP_FILE = CMakeFiles\pic_printer.dir\main.c.obj.d
-  FLAGS = -g -std=gnu99 -fdiagnostics-color=always
+  FLAGS = -g -std=gnu90 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\pic_printer.dir
   OBJECT_FILE_DIR = CMakeFiles\pic_printer.dir
 

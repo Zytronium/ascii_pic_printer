@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	int newGrid[16][17] = {
+	int face[16][17] = {
 			{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2 },
 			{ 1, 0, 0, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 0, 0, 1, 2 },
 			{ 1, 0, 1, 0, 4, 0, 1, 0, 0, 1, 0, 4, 0, 1, 0, 1, 2 },
@@ -22,7 +22,35 @@ int main(void)
 			{ 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 3, 3, 2, 2, 1, 0, 0 }
 	};
 
-	print_grid_as_pic(16, 17, newGrid);
+	int gradient[10][10] = {
+			{ 0, 0, 1, 1, 2, 2, 3, 3, 2, 1 },
+			{ 0, 1, 1, 2, 2, 3, 3, 4, 3, 2 },
+			{ 1, 1, 2, 2, 3, 3, 4, 4, 4, 3 },
+			{ 1, 2, 2, 3, 3, 4, 4, 4, 4, 4 },
+			{ 2, 2, 3, 3, 4, 4, 4, 4, 4, 4 },
+			{ 2, 3, 3, 4, 4, 4, 4, 4, 4, 4 },
+			{ 3, 3, 4, 4, 4, 4, 4, 4, 4, 3 },
+			{ 3, 4, 4, 4, 4, 4, 4, 4, 3, 2 },
+			{ 4, 4, 4, 4, 4, 4, 4, 3, 2, 1 },
+			{ 4, 4, 4, 4, 4, 4, 3, 2, 1, 0 }
+	};
+
+	grid_t face_grid;
+	face_grid.width = 16;
+	face_grid.height = 17;
+	*face_grid.grid = &face[0][0];
+	printf("w: %d; h: %d\n", face_grid.width, face_grid.height);
+
+	printf("w: %d; h: %d\n", face_grid.width, face_grid.height);
+	grid_t test_grid;
+	test_grid.width = 10;
+	test_grid.height = 10;
+	*test_grid.grid = &gradient[0][0];
+	printf("w: %d; h: %d\n", face_grid.width, face_grid.height);
+
+	print_grid_as_pic(16, 17, face);
+	printf("w: %d; h: %d\n", face_grid.width, face_grid.height);
+
 	return (0);
 }
 /**
@@ -79,4 +107,8 @@ void print_grid_as_pic(int rows, int cols, int grid[rows][cols])
 		y++;
 		x = 0;
 	}
+}
+void print_grid_2(grid_t grid)
+{
+	print_grid_as_pic(grid.height, grid.width, (int (*)[]) grid.grid);
 }

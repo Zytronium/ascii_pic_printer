@@ -2,5 +2,6 @@
 #define main_h
 
 void print_grid_as_pic(int rows, int cols, int grid[rows][cols]);
+void rev_grid(int rows, int cols, int grid[rows][cols]);
 
 #endif

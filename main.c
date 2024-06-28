@@ -35,13 +35,17 @@ int main(void)
 	};
 
 	print_grid_as_pic(10, 10, gradient);
-
 	putchar('\n');
+	print_grid_as_pic(16, 17, face);
+	putchar('\n');
+
+	rev_grid(16, 17, face);
 
 	print_grid_as_pic(16, 17, face);
 
 	return (0);
 }
+
 /**
  * prints a grid of integers as a grid of ascii squares, with shades
  * that correspond to the integers' values, where 4 is fully opaque,
@@ -93,6 +97,43 @@ void print_grid_as_pic(int rows, int cols, int grid[rows][cols])
 			x++;
 		}
 		putchar('\n');
+		y++;
+		x = 0;
+	}
+}
+
+void rev_grid(int rows, int cols, int grid[rows][cols])
+{
+	int x = 0, y = 0;
+
+	while (grid[y][0] >= 0 && y < rows)
+	{
+		while (grid[y][x] >= 0 && x < cols)
+		{
+
+			switch (grid[y][x])
+			{
+				case 0:
+					grid[y][x] = 4;
+					break;
+
+				case 1:
+					grid[y][x] = 3;
+					break;
+
+				case 3:
+					grid[y][x] = 1;
+					break;
+
+				case 4:
+					grid[y][x] = 0;
+					break;
+
+				default:
+					break;
+			}
+			x++;
+		}
 		y++;
 		x = 0;
 	}

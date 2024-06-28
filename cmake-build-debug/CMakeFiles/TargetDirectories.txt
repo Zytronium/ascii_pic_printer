@@ -1,0 +1,3 @@
+C:/Users/Owner/CLionProjects/pic_printer/cmake-build-debug/CMakeFiles/pic_printer.dir
+C:/Users/Owner/CLionProjects/pic_printer/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Owner/CLionProjects/pic_printer/cmake-build-debug/CMakeFiles/rebuild_cache.dir

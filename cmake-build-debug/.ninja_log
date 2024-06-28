@@ -1,0 +1,6 @@
+# ninja log v6
+9	152	7413063581416992	CMakeFiles/pic_printer.dir/main.c.obj	10c22ea50beff0b6
+153	582	7413063582846829	pic_printer.exe	52583cd787c37d3d
+3	351	7413080297455979	build.ninja	76ef746ee990571b
+3	183	7413080353196479	CMakeFiles/pic_printer.dir/main.c.obj	73ccaa1cd523300b
+185	663	7413080355020186	pic_printer.exe	10db5ac2cba50586

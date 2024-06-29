@@ -106,6 +106,8 @@ int main(void)
 			{ 2, 3, 0, 3, 4, 0, 1, 2 }
 	};
 
+	print_grid_as_pic(10, 10, gradient);
+	printf("\n\n\n");
 	print_grid_as_pic(16, 17, face);
 	printf("\n\n\n");
 	rev_grid(16, 17, face);
@@ -113,7 +115,9 @@ int main(void)
 	printf("\n\n\n");
 	print_grid_as_pic(8, 8, creeper);
 	printf("\tAaaw man! ;)\n\n\n");
-	print_grid_as_pic(10, 10, gradient);
+	print_grid_as_pic(30, 42, thinkingBleach);
+	printf("\n\n\n");
+	print_grid_as_pic(25, 34, stratos);
 	return (0);
 }
 
